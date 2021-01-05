@@ -55,9 +55,8 @@
                 //登录
                 this.$refs[formName].validate((valid) => {
                     if (valid) {
-                        // 使用 vue-router 路由到指定页面，该方式称之为编程式导航
                         this.$store.dispatch('GetUserInfo',this.form);
-                        this.$router.push("/");
+                        this.$router.push('/goodsList');
                     } else {
                         this.dialogVisible = true;
                         return false;

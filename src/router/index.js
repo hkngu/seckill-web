@@ -1,8 +1,9 @@
 import Vue from "vue"
 import VueRouter from 'vue-router'
 
-import login from "../views/Login"
-import Main from '../views/Main'
+import Login from "../views/Login"
+
+import GoodsList from "@/views/goods/GoodsList";
 
 Vue.use(VueRouter);
 
@@ -13,13 +14,14 @@ export default new VueRouter({
       // 登录页
       path: '/login',
       name: 'login',
-      component: login
+      component: Login
     },
     {
-      // 首页
-      path: '/main',
-      name: 'Main',
-      component: Main
+      // 商品列表页
+      path: '/goodsList',
+      name: 'GoodsList',
+      component: GoodsList
     }
+
   ]
 })
